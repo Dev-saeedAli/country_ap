@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <!--x bootstrap x-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Js -->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--x Font awesome x-->
+    <script src="Bootstrap/js/bootstrap.bundle.js" defer></script>
+    <script src="app.js"defer></script>
+    <!--x Js x-->
+    <title>Rest Country Api</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">Where in the world?</a>
+          <div class="modes">
+            <i class="fa-solid fa-moon fa-1x me-2"></i>
+            <p class="m-0 p-0">Dark Mode</p>
+          </div>
+        </div>
+    </nav>
+    <!--x navbar x-->
+
+    <!-- country cards  -->
+    <main class="mainContainer">
+        <div class="container ">
+            <div class="grid">
+                <div class="row align-items-center">
+                    <div class="col-lg-10 col-md-3">
+                        <form  class="form-group">
+                            <i class="fas fa-search"></i>
+                            <label for="search">
+                               <input id="inputSearch" type="text" id="search" placeholder="Select for a country" class="form-control-sm "></input>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 d-flex align-items-center">
+                        <select class="form-select" aria-label=".form-select-sm example">
+                            <option selected>Filter By Region</option>
+                            <option value="africa">Africa</option>
+                            <option value="america">America</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+               <!-- cards -->
+               <section>
+                <div class="grid">
+                    <div class="row allCountries align-items-lg-center">
+                       <!-- fetching from api -->
+                    </div>
+                </div>
+            </section>
+            <!--x cards x-->
+        </div>
+    </main>
+    <!--x country cards  x-->
+
+    <!-- country info -->
+   <div class="card-infos d-none">
+    <div class="container text-white" id="info">
+    </div>
+   </div>
+    <!--x country info x-->
+
+</body>
+</html>
